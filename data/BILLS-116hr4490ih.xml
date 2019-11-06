@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="billres.xsl"?>
+<!DOCTYPE bill PUBLIC "-//US Congress//DTDs/bill.dtd//EN" "bill.dtd">
+<bill bill-stage="Introduced-in-House" bill-type="olc" dms-id="HE21F1E37DEA1405793198D3F1BDF5DD9" key="H" public-private="public"><metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dublinCore>
+<dc:title>116 HR 4490 IH: To require the Inspector General, Department of Justice, to submit a report to the Congress on the number of firearm transaction denials issued by the National Instant Criminal Background Check System that are referred to the Bureau of Alcohol, Tobacco, Firearms, and Explosives for investigation, the number of prosecutions resulting from such investigations, and the number of firearms recovered by the Bureau in cases in which such a denial was issued after the firearm was transferred.</dc:title>
+<dc:publisher>U.S. House of Representatives</dc:publisher>
+<dc:date>2019-09-25</dc:date>
+<dc:format>text/xml</dc:format>
+<dc:language>EN</dc:language>
+<dc:rights>Pursuant to Title 17 Section 105 of the United States Code, this file is not subject to copyright protection and is in the public domain.</dc:rights>
+</dublinCore>
+</metadata>
+<form>
+<distribution-code display="yes">I</distribution-code><congress display="yes">116th CONGRESS</congress><session display="yes">1st Session</session><legis-num display="yes">H. R. 4490</legis-num><current-chamber>IN THE HOUSE OF REPRESENTATIVES</current-chamber><action display="yes"><action-date date="20190925">September 25, 2019</action-date><action-desc><sponsor name-id="B001248">Mr. Burgess</sponsor> introduced the following bill; which was referred to the <committee-name committee-id="HJU00">Committee on the Judiciary</committee-name></action-desc></action><legis-type>A BILL</legis-type><official-title display="yes">To require the Inspector General, Department of Justice, to submit a report to the Congress on the
+			 number of firearm transaction denials issued by the National Instant
+			 Criminal Background Check System that are referred to the Bureau of
+			 Alcohol, Tobacco, Firearms, and Explosives for investigation, the number
+			 of prosecutions resulting from such investigations, and the number of
+			 firearms recovered by the Bureau in cases in which such a denial was
+			 issued after the firearm was transferred.</official-title></form>
+	<legis-body id="H0CA616861D5A42D0964E35C901A1BCEB" style="OLC">
+ <section id="HDB5D48F6DAE1475DBD5A5133358E046C" section-type="section-one"><enum>1.</enum><header>Report on firearm transfers denied as a result of a NICS check</header><text display-inline="no-display-inline">Within 90 days after the date of the enactment of this Act, the Inspector General, Department of Justice, shall prepare and submit to the Congress a written report—</text>
+ <paragraph id="HD0FFAEB7C8CC44E2935D16B492F23CF2"><enum>(1)</enum><text display-inline="yes-display-inline">on the number of firearm transactions with respect to which the national instant criminal background check system established under the Brady Handgun Violence Prevention Act has determined that receipt of a firearm by the prospective firearm transferee would violate Federal or State law, and which have been referred to the Bureau of Alcohol, Tobacco, Firearms, and Explosives for investigation;</text>
+ </paragraph><paragraph id="HF44896F5B1F94B5B918D8F993B6143EA"><enum>(2)</enum><text>on the number of persons prosecuted by a United States attorney for an alleged violation of Federal law in connection with a transaction referred to in paragraph (1); and</text>
+ </paragraph><paragraph id="H45EAA859C1BE4F1BA84FEF24275793F3"><enum>(3)</enum><text>assessing the efforts of the Bureau to seize firearms received by persons—</text> <subparagraph id="H5F5A0379234D498B94CD4F378E00114A"><enum>(A)</enum><text>with respect to whom the system referred to in paragraph (1) of this section was contacted pursuant to section 922(t) of title 18, United States Code, in relation to a firearm transaction;</text>
+ </subparagraph><subparagraph id="H39320CE569164A3DB89ED6E7444CAF3D"><enum>(B)</enum><text>to whom a firearm was transferred after the 3-day period described in section 922(t)(1)(B)(ii) of such title that applied with respect to the transaction; and</text>
+ </subparagraph><subparagraph id="HA6A324DEEAE3477C81EB59EEC96B5B3A"><enum>(C)</enum><text>with respect to whom the system referred to in paragraph (1) of this section subsequently made the determination described in such paragraph.</text>
+				</subparagraph></paragraph></section></legis-body></bill>
+
+
