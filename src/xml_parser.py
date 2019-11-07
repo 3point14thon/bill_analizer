@@ -1,9 +1,8 @@
 from collections import defaultdict
-import xml.etree.ElementTree as et
+import xml.etree.ElementTree as ET
 
-def mk_dict(file_name):
-    tree = et.parse(file_name)
-    root = tree.getroot()
+def mk_dict(bill_txt):
+    root = ET.fromstring(bill_txt)
     bill = defaultdict(list)
     get_node_info(root, bill)
     return bill
