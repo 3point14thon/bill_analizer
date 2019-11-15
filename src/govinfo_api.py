@@ -33,3 +33,7 @@ class GovInfoApi():
                 f'api_key={self.api_key}'
                 ))
         return requests.get('?'.join((url, params)))
+
+    def get_bill_data(self, package_id, content_type='xml'):
+        path = '/'.join((self.base_url, 'packages', package_id, content_type))
+        return requests.get(path)
