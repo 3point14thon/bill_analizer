@@ -27,13 +27,14 @@ class GovInfoApi():
             url = self.base_url + path
         else:
             url = self.base_url + path
-        params = '&'.join((
-                f'offset={offset}',
-                f'pageSize={size}',
-                f'api_key={self.api_key}'
-                ))
-        return requests.get('?'.join((url, params)))
+        params = {
+                'offset': offset,
+                'pageSize': size,
+                'api_key': self.api_key
+                }
+        return requests.get(url, params)
 
     def get_bill_data(self, package_id, content_type='xml'):
         path = '/'.join((self.base_url, 'packages', package_id, content_type))
-        return requests.get(path)
+        params = {'api_key': self.api_key}
+        return requests.get(path, params)
