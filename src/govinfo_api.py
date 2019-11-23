@@ -8,9 +8,9 @@ class GovInfoApi():
         self.api_key = api_key()
 
 
-    def get_bills(self, start_date, end_date=None, offset=0, size=100):
+    def get_collection(self, start_date, end_date=None, collection='BILLS', offset=0, size=100):
         '''
-        Grabs bill meta data from govinfo.gov
+        Grabs bill collection data from govinfo.gov
 
         Args:
             start_date (str): Earliest point that bill data will be grabbed. Form of: yyyy-mm-dd
@@ -21,7 +21,7 @@ class GovInfoApi():
         Returns: Bill data in the form of a response object
         '''
         time = 'T00%3A00%3A00Z'
-        path = '/'.join(('collections', 'BILLS', start_date + time))
+        path = '/'.join(('collections', collection, start_date + time))
         if end_date:
             path = '/' + end_date + time
             url = self.base_url + path
@@ -34,7 +34,7 @@ class GovInfoApi():
                 }
         return requests.get(url, params)
 
-    def get_bill_data(self, package_id, content_type='xml'):
+    def get_package_data(self, package_id, content_type='xml'):
         path = '/'.join((self.base_url, 'packages', package_id, content_type))
         params = {'api_key': self.api_key}
         return requests.get(path, params)
