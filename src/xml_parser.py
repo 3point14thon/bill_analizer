@@ -7,8 +7,7 @@ def mk_dict(bill_txt):
     bill = get_lv1_data(root.find('metadata'), bill)
     bill = get_lv1_data(root.find('form'), bill)
     body = 'legis_body'
-    bill[body] = get_legis_body(root.find(body)
-    get_node_info(root, bill)
+    bill[body] = get_legis_body(root.find(body))
     return bill
 
 def get_lv1_data(branch, xml_dict):
