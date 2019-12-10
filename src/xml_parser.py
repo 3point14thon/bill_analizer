@@ -20,5 +20,5 @@ def get_legis_body(branch, leg=''):
     for child in branch:
         if child.text:
             leg = ' '.join([leg, child.text])
-        leg = par_child(child, leg)
+        leg = get_legis_body(child, leg)
     return leg
