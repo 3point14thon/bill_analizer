@@ -44,9 +44,9 @@ class GovInfoApi():
 
     def mk_bill_df(self, start_date, end_date=None, offset=0, size=100):
         bills_collection = self.get_collection(start_date, end_date, 'BILLS', offset, size)
-        bills_collection = json.loads(bills)['packages']
+        bills_collection = json.loads(bills_collection.text)['packages']
         bills = []
         for bill in bills_collection:
-            bill_id = bill[0]['packageId']
+            bill_id = bill['packageId']
             bills.append(mk_dict(bill_id))
         return pd.DataFrame(bills)
