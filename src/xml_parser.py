@@ -13,7 +13,7 @@ def mk_dict(bill_txt):
 def get_lv1_data(branch, xml_dict):
     for datum in list(branch):
         if datum.text:
-            bill_dict[datum.tag] = datum.text
+            xml_dict[datum.tag] = datum.text
     return xml_dict
 
 def get_legis_body(branch, leg=''):
