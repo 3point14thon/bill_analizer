@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 
 def mk_dict(bill_txt):
     root = ET.fromstring(bill_txt)
-    bill = defaultdict(list)
+    bill = {}
     bill = get_lv1_data(root.find('metadata'), bill)
     bill = get_lv1_data(root.find('form'), bill)
     body = 'legis_body'
