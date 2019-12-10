@@ -5,7 +5,7 @@ def mk_dict(bill_txt):
     bill = {}
     bill = get_lv1_data(root.find('metadata'), bill)
     bill = get_lv1_data(root.find('form'), bill)
-    body = 'legis_body'
+    body = 'legis-body'
     bill[body] = get_legis_body(root.find(body))
     return bill
 
@@ -16,7 +16,7 @@ def get_lv1_data(branch, xml_dict):
     return xml_dict
 
 def get_legis_body(branch, leg=''):
-    for child in branch:
+    for child in list(branch):
         if child.text:
             leg = ' '.join([leg, child.text])
         leg = get_legis_body(child, leg)
