@@ -11,9 +11,9 @@ def mk_dict(bill_txt):
     return bill
 
 def get_lv1_data(branch, xml_dict):
-    for datum in list(branch):
-        if datum.text:
-            xml_dict[datum.tag] = datum.text
+    for child in list(branch):
+        if child.text:
+            xml_dict[child.tag] = child.text
     return xml_dict
 
 def get_legis_body(branch, leg=''):
