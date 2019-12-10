@@ -19,7 +19,7 @@ def mk_dict(bill_txt):
     bill[body] = get_legis_body(root.find(body))
     return bill
 
-def get_lv1_data(branch, xml_dict):
+def get_lv1_data(root, xml_dict):
     '''
     returns a dictionary of data extracted from the children
     of the given branch but not the childrens "decendents".
@@ -33,19 +33,19 @@ def get_lv1_data(branch, xml_dict):
 
     Returns: Dictionary of extracted data.
     '''
-    for child in list(branch):
+    for child in list(root):
         if child.text:
             xml_dict[child.tag] = child.text
     return xml_dict
 
-def get_legis_body(branch, leg=''):
+def get_legis_body(root, kern=''):
     '''
     returns a string of all text fields in all downstream
     elements from the given branch concatinated into one
     string.
 
     Args:
-        branch(xml_element): root element used to find all
+        root(xml_element): root element used to find all
         downstream elements.
 
         leg(str): kernal string added to to form pooled text
@@ -54,8 +54,8 @@ def get_legis_body(branch, leg=''):
     Returns: String of pooled text from all text fields in
     given tree.
     '''
-    for child in list(branch):
+    for child in list(root):
         if child.text:
-            leg = ' '.join([leg, child.text])
-        leg = get_legis_body(child, leg)
-    return leg
+            kern = ' '.join([kern, child.text])
+        kern = get_legis_body(child, kern)
+    return kern
