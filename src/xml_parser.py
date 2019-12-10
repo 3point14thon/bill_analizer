@@ -33,7 +33,7 @@ def get_lv1_data(root, xml_dict):
 
     Returns: Dictionary of extracted data.
     '''
-    for child in list(root):
+    for child in root:
         if child.text:
             xml_dict[child.tag] = child.text
     return xml_dict
@@ -54,7 +54,7 @@ def get_legis_body(root, kern=''):
     Returns: String of pooled text from all text fields in
     given tree.
     '''
-    for child in list(root):
+    for child in root:
         if child.text:
             kern = ' '.join([kern, child.text])
         kern = get_legis_body(child, kern)
