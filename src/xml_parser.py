@@ -1,4 +1,3 @@
-from collections import defaultdict
 import xml.etree.ElementTree as ET
 
 def mk_dict(bill_txt):
