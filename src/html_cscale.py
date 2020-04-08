@@ -1,4 +1,16 @@
 def mk_color_span(vals, txts, lower_bound=0, upper_bound=1):
+    '''
+    Generates a string of html spans whos background colors
+    corospond to the values in vals. Larger numbers have a
+    greener color smaller have a redder.
+
+    Inputs:
+        vals (iterable of floats): Values to be used in generating
+        the rbgs.
+        txts (iterable of strings): The content of the spans.
+        lower_bound (float):The lowest value on the numeric scale.
+        upper_bound (float): The highest value on the numeric scale.
+    '''
     span_start = '<span style="background-color:rgba'
     color_doc = [span_start +
                  f'{c_scale(val, lower_bound, upper_bound)};">' +
@@ -10,6 +22,7 @@ def mk_color_span(vals, txts, lower_bound=0, upper_bound=1):
 def c_scale(num_val, lower_bound=0, upper_bound=1):
     '''
     Returns a tuble of rgb values and opacity based on the inputs.
+    Larger numbers have a greener color smaller have a redder.
 
     Inputs:
         num _val (float): The value of this instance on the scale.
